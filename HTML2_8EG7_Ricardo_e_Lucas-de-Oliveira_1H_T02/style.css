@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    background-color: #E2B616;
+    align-items: center;
+    color: black;
+}
+table {
+    margin: 50px auto;
+}
+td {
+    background-color: #E2B616;
+}
+.imagem-filme {
+    height: 300px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -30px);
+    border-radius: 30px;
+    transition: transform 0.5s ease;
+}
+.filme {
+    height: 380px;
+    width: 250px;
+    border: 10px solid;
+    padding-top: 30px;
+    border-radius: 25px;
+}
+.filme:hover img{
+    transform-origin: center;
+    transform: translate(-50%, -30px) scale(1.05);
+}
+ 
+.titulo {
+    font-size: x-large;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding-left: 50px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    display: flex;
+    align-items: center;
+}
+.botoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.botao-veja {
+    background-color: #1729E3;
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-bottom: 3px;
+    color: white;
+}
+
+footer{
+    background-color: #E2B616;
+    text-align: center;
+    font-size: large;
+    padding: 10px;
+}
