@@ -18,12 +18,30 @@ table {
 td {
     background-color: #E2B616;
 }
-.imagem-filme {
+ul{
+    display: flex;
+}
+li {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.secao-imagem {
     height: 300px;
+    width: 230px;
     position: relative;
     left: 50%;
     transform: translate(-50%, -30px);
     border-radius: 30px;
+    overflow: hidden;
+
+}
+.imagem-filme{
+    height: 300px;
+    width: 230px;
+    border-radius: 30px;
+    position: relative;
     transition: transform 0.5s ease;
 }
 .filme {
@@ -35,9 +53,9 @@ td {
 }
 .filme:hover img{
     transform-origin: center;
-    transform: translate(-50%, -30px) scale(1.05);
+    transform: scale(1.09);
 }
- 
+
 .titulo {
     font-size: x-large;
     background-color: black;
