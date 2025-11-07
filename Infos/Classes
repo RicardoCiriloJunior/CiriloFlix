@@ -1,0 +1,7 @@
+.container - engloba toda a página
+.titulo - Título das seções
+.mais-vistos - Parte dos filmes mais vistos
+.filme - O bloco de cada filme
+.titulo-filme - titulo do filme (não sei se precisa, dependendo da imagem já vem com o título junto)
+.botao-veja - Botão que leva à página do filme no site que pegamos
+.recomendados - Parte dos filmes recomendados por nós
