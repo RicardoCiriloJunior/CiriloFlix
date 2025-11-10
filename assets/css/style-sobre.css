@@ -63,6 +63,11 @@ main hr {
     margin: 5rem 2rem;
 }
 
+.about-section > h1 {
+    color: var(--primary-color);
+    margin-left: 20px;
+}
+
 /* Sobre */
 .card-lateral {
     width: 75%;
@@ -128,7 +133,8 @@ main hr {
     /* margin-bottom: 2rem; */
 }
 
-.curiosidades ul {
+
+.container-curiosidades {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -150,7 +156,13 @@ main hr {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.3s ease;
 }
+
+.card-curiosidade:hover {
+    transform: scale(1.2);
+}
+
 
 /* final Sec-curiosidades */
 
@@ -189,6 +201,11 @@ main hr {
     border: 1px solid var(--primary-color);
     font-weight: bold;
     color: white;
+    transition: 0.3s ease;
+}
+
+.card-lugar:hover {
+    transform: scale(1.30);
 }
 
 /* final Lugares que já visitei */
@@ -214,17 +231,28 @@ main hr {
     flex-direction: column;
     list-style: none;
     list-style-position: inside;
+    gap: 5px;
 }
 
 .card-lugarF {
     box-sizing: border-box;
-    height: 8rem;
+    height: 10rem;
     width: 50rem;
     border: 1px solid var(--primary-color);
     text-align: left;
     padding: 1rem;
     font-size: 1.2rem;
     color: white;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    transition: 0.3s ease;
+}
+
+.card-lugarF:hover {
+    transform: scale(1.2);
 }
 
 /* final quero visitar */
@@ -266,13 +294,13 @@ main hr {
     background: url('../imgs/lugares-Ricardo/SC.webp') no-repeat;
 }
 .p1-lf1 {
-    background: url('../imgs/lugares-Ricardo/japao.webp') no-repeat;
+    background-image: url('../imgs/lugares-Ricardo/japao.webp');
 }
 .p1-lf2 {
-    background: url('../imgs/lugares-Ricardo/suiça.webp') no-repeat;
+    background-image: url('../imgs/lugares-Ricardo/suiça.webp');
 }
 .p1-lf3 {
-    background: url('../imgs/lugares-Ricardo/Finlandia.webp') no-repeat;
+    background-image: url('../imgs/lugares-Ricardo/Finlandia.webp');
 }
 
 /* p2 */
@@ -286,11 +314,23 @@ main hr {
     background: url('../imgs/lugares-Lucas/vista-aerea-criciuma-sc-696x391.webp') no-repeat;
 }
 .p2-lf1 {
-    background: url('../imgs/lugares-Lucas/inglaterra.webp') no-repeat;
+    background-image: url('../imgs/lugares-Lucas/inglaterra.webp');
 }
 .p2-lf2 {
-    background: url('../imgs/lugares-Lucas/alemanha.webp') no-repeat;
+    background-image: url('../imgs/lugares-Lucas/alemanha.webp');
 }
 .p2-lf3 {
-    background: url('../imgs/lugares-Ricardo/suiça.webp') no-repeat;
+    background-image: url('../imgs/lugares-Ricardo/suiça.webp');
+}
+
+footer {
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    margin: 0;
+    height: 40px;
 }
