@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoatFlix</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -24,7 +26,8 @@
         <section class="hero" id="inicio">
             <div class="hero-content active">
                 <h1>Interestelar:</h1>
-                <p>Uma missão além das estrelas para salvar a humanidade — amor, sacrifício e ciência colidem no limite do espaço-tempo.</p>
+                <p>Uma missão além das estrelas para salvar a humanidade — amor, sacrifício e ciência colidem no limite
+                    do espaço-tempo.</p>
             </div>
             <div class="hero-content">
                 <h1>Vingadores - Guerra infinita:</h1>
@@ -32,13 +35,14 @@
             </div>
             <div class="hero-content">
                 <h1>Indiana Jones - A arca perdida:</h1>
-                <p>Aventura, mistério e perigo — um arqueólogo enfrenta forças antigas em busca de um artefato lendário.</p>
+                <p>Aventura, mistério e perigo — um arqueólogo enfrenta forças antigas em busca de um artefato lendário.
+                </p>
             </div>
             <div class="hero-content">
                 <h1>Gladiador:</h1>
                 <p>Honra e vingança na arena — um guerreiro luta por justiça diante de impérios e traições.</p>
             </div>
-        
+
             <!-- Dots -->
             <div class="hero-dots">
                 <span class="dot active" data-slide="0"></span>
@@ -52,12 +56,16 @@
             <h2>Filmes de Ação</h2>
             <div class="filmes-container">
                 <div class="filmes-scroll">
-                    <div class="filme-card film-a1">
-                        <span class="saiba-mais">Saiba mais</span>
-                    </div>
-                    <div class="filme-card film-a2">
-                        <span class="saiba-mais">Saiba mais</span>
-                    </div>
+                    <a href="pages/guerra-infinita.html">
+                        <div class="filme-card film-a1">
+                            <span class="saiba-mais">Saiba mais</span>
+                        </div>
+                    </a>
+                    <a href="pages/interestelar.html">
+                        <div class="filme-card film-a2">
+                            <span class="saiba-mais">Saiba mais</span>
+                        </div>
+                    </a>
                     <div class="filme-card film-a3">
                         <span class="saiba-mais">Saiba mais</span>
                     </div>
@@ -74,7 +82,7 @@
             </div>
         </section>
 
-        <section class="filmes-section" id="mais-vistos">
+        <!-- <section class="filmes-section" id="mais-vistos">
             <h2>Mais Vistos</h2>
             <div class="filmes-container">
                 <div class="mais-vistos-scroll">
@@ -110,7 +118,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="filmes-section">
             <h2>Filmes de Comédia</h2>
@@ -125,15 +133,6 @@
                     <div class="filme-card film-c3">
                         <span class="saiba-mais">Saiba mais</span>
                     </div>
-                    <div class="filme-card film-c4">
-                        <span class="saiba-mais">Saiba mais</span>
-                    </div>
-                    <div class="filme-card film-c5">
-                        <span class="saiba-mais">Saiba mais</span>
-                    </div>
-                    <div class="filme-card film-c6">
-                        <span class="saiba-mais">Saiba mais</span>
-                    </div>
                 </div>
             </div>
         </section>
@@ -144,10 +143,10 @@
             <h3>Sobre nós:</h3>
             <p>public class SobreNós {public static void main(String[] args) {System.out.println("Sobre nós");}}</p>
             <p>int main() {std::cout << "Sobre nós" << std::endl;}</p>
-            <div class="footer-buttons">
-                <button class="footer-btn btn-primary">Saiba mais</button>
-                <button class="footer-btn btn-secondary">Saiba mais</button>
-            </div>
+                    <div class="footer-buttons">
+                        <button class="footer-btn btn-primary">Saiba mais</button>
+                        <button class="footer-btn btn-secondary">Saiba mais</button>
+                    </div>
         </div>
         <div class="footer-bottom">
             <p>Direitos reservados</p>
@@ -171,7 +170,7 @@
         function updateBackground(index) {
             // Pega o caminho da imagem do atributo 'data-bg' do slide ativo
             const imageUrl = heroContents[index].getAttribute('data-bg');
-            
+
             // Define a imagem de fundo do elemento hero-background.
             // O CSS (linear-gradient) já adiciona o overlay escuro.
             heroBackground.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${imageUrl}')`;
@@ -189,14 +188,14 @@
             // 1. Remove a classe 'active' de todos os elementos
             heroContents.forEach(content => content.classList.remove('active'));
             dots.forEach(dot => dot.classList.remove('active'));
-            
+
             // 2. Adiciona a classe 'active' ao slide e dot atual
             heroContents[index].classList.add('active');
             dots[index].classList.add('active');
 
             // 3. Atualiza o background
             updateBackground(index);
-            
+
             // 4. Salva o índice atual
             currentSlide = index;
         }
@@ -232,4 +231,5 @@
     });
     /* --- FIM DA LÓGICA JAVASCRIPT --- */
 </script>
+
 </html>
