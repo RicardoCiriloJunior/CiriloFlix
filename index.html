@@ -1,114 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>goatflix</title>
+    <title>GoatFlix</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <img src="assets/imgs/elementos/Logo.png" id="logo" alt="logo goatflix"/>
-        <ul class="header-links">
-            <li><a href="">
-                    <h2 class="header-subtitle header-subtitle1">Home</h2>
-                </a></li>
-            <li><a href="">
-                    <h2 class="header-subtitle header-subtitle-mais-vistos">Mais Vistos</h2>
-                </a></li>
-            <li><a href="">
-                    <h2 class="header-subtitle header-subtitle-sobre-nos">Sobre nós</h2>
-                </a></li>
-        </ul>
+    <header>
+        <div class="logo">
+            <img src="assets/imgs/elementos/Logo.png" alt="logo GoatFlix">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Home</a></li>
+                <li><a href="#mais-vistos">Mais Vistos</a></li>
+                <li><a href="#sobre">Sobre nós</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="filmes-carrousel">
-        <div class="filme-informacao">
-            <h1 class="filme-title">Interestelar:</h1>
-            <h2 class="filme-subtitle">
-                Uma missão além das estrelas para salvar a humanidade — amor, sacrifício e ciência colidem no limite do
-                espaço-tempo.
-            </h2>
-        </div>
-
-        <div class="filmes-inf filmes-inf1">
-            <div class="filmes-inf-circle filmes-inf-yellow"></div>
-            <div class="filmes-inf-circle"></div>
-            <div class="filmes-inf-circle"></div>
-            <div class="filmes-inf-circle"></div>
-        </div>
-    </div>
-
     <main>
-        <div class="aba-filmes-a aba-filmes1">
-            <h2 class="aba-filmes-subtitle1">Filmes de Ação</h2>
-
-            <div class="aba-filmes-carousel1">
-                <div class="q-filme aba-filmes-q-filme1"></div>
-                <div class="q-filme aba-filmes-q-filme2"></div>
-                <div class="q-filme aba-filmes-q-filme3"></div>
-                <div class="aba-filmes-q-filme4"></div>
+        <section class="hero" id="inicio">
+            <div class="hero-content active">
+                <h1>Interestelar:</h1>
+                <p>Uma missão além das estrelas para salvar a humanidade — amor, sacrifício e ciência colidem no limite do espaço-tempo.</p>
             </div>
-        </div>
+            <div class="hero-content">
+                <h1>Vingadores - Guerra infinita:</h1>
+                <p>Heróis unidos contra o destino — esperança e dor em uma batalha pelo universo.</p>
+            </div>
+            <div class="hero-content">
+                <h1>Indiana Jones - A arca perdida:</h1>
+                <p>Aventura, mistério e perigo — um arqueólogo enfrenta forças antigas em busca de um artefato lendário.</p>
+            </div>
+            <div class="hero-content">
+                <h1>Gladiador:</h1>
+                <p>Honra e vingança na arena — um guerreiro luta por justiça diante de impérios e traições.</p>
+            </div>
+        
+            <!-- Dots -->
+            <div class="hero-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+            </div>
+        </section>
 
-        <div class="mais-vistos mais-vistos1">
-            <h2 class="mais-vistos-subtitle">Mais Vistos</h2>
-
-            <div class="mais-vistos-carousel">
-                <div class="filme">
-                    <div class="filme-img"></div>
-                </div>
-
-                <div class="filme">
-                    <div class="filme-img"></div>
-                </div>
-
-                <div class="filme">
-                    <div class="filme-img"></div>
-                </div>
-
-                <div class="mais-vistos-filme">
-                    <div class="mais-vistos-img"></div>
+        <section class="filmes-section">
+            <h2>Filmes de Ação</h2>
+            <div class="filmes-container">
+                <div class="filmes-scroll">
+                    <div class="filme-card film-a1">
+                        <span class="saiba-mais">Saiba mais</span>
+                    </div>
+                    <div class="filme-card film-a2">
+                        <span class="saiba-mais">Saiba mais</span>
+                    </div>
+                    <div class="filme-card film-a3">
+                        <span class="saiba-mais">Saiba mais</span>
+                    </div>
+                    <div class="filme-card film-a4">
+                        <span class="saiba-mais">Saiba mais</span>
+                    </div>
+                    <div class="filme-card film-a5">
+                        <span class="saiba-mais">Saiba mais</span>
+                    </div>
+                    <div class="filme-card film-a6">
+                        <span class="saiba-mais">Saiba mais</span>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="aba-filmes-b aba-filmes2">
-            <h2 class="aba-filmes-subtitle2">Filmes de Comédia</h2>
-
-            <div class="aba-filmes-carousel2">
-                <div class="q-filme aba-filmes-q-filme5"></div>
-                <div class="q-filme aba-filmes-q-filme6"></div>
-                <div class="q-filme aba-filmes-q-filme7"></div>
-                <div class="aba-filmes-q-filme8"></div>
+        <section class="filmes-section" id="mais-vistos">
+            <h2>Mais Vistos</h2>
+            <div class="filmes-container">
+                <div class="mais-vistos-scroll">
+                    <div class="mais-visto-card">
+                        <div class="mais-visto-poster mv1">
+                            <span class="saiba-mais-mv">Saiba mais</span>
+                            <div class="mais-visto-numero">1</div>
+                        </div>
+                    </div>
+                    <div class="mais-visto-card">
+                        <div class="mais-visto-poster mv2">
+                            <span class="saiba-mais-mv">Saiba mais</span>
+                            <div class="mais-visto-numero">2</div>
+                        </div>
+                    </div>
+                    <div class="mais-visto-card">
+                        <div class="mais-visto-poster mv3">
+                            <span class="saiba-mais-mv">Saiba mais</span>
+                            <div class="mais-visto-numero">3</div>
+                        </div>
+                    </div>
+                    <div class="mais-visto-card">
+                        <div class="mais-visto-poster mv4">
+                            <span class="saiba-mais-mv">Saiba mais</span>
+                            <div class="mais-visto-numero">4</div>
+                        </div>
+                    </div>
+                    <div class="mais-visto-card">
+                        <div class="mais-visto-poster mv5">
+                            <span class="saiba-mais-mv">Saiba mais</span>
+                            <div class="mais-visto-numero">5</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section class="filmes-section">
+            <h2>Filmes de Comédia</h2>
+            <div class="filmes-container">
+                <div class="filmes-scroll">
+                    <div class="filme-card film-c1">
+                        <span class="saiba-mais">Saiba mais</span>
+                    </div>
+                    <div class="filme-card film-c2">
+                        <span class="saiba-mais">Saiba mais</span>
+                    </div>
+                    <div class="filme-card film-c3">
+                        <span class="saiba-mais">Saiba mais</span>
+                    </div>
+                    <div class="filme-card film-c4">
+                        <span class="saiba-mais">Saiba mais</span>
+                    </div>
+                    <div class="filme-card film-c5">
+                        <span class="saiba-mais">Saiba mais</span>
+                    </div>
+                    <div class="filme-card film-c6">
+                        <span class="saiba-mais">Saiba mais</span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p class="footer-text-top">Direitos reservados</p>
-        <div class="footer-line"></div>
-
-        <div class="footer-sobre-nos">
-            <div class="footer-col">
-                <h2 class="footer-subtitle">Sobre nós:</h2>
-                <p class="footer-text-public-class">
-                    public class SobreNos {public static void main(String[] args) {System.out.println(“Sobre
-                    nós”);}}<br />
-                    <br />
-                    int main() {std::cout&lt;&lt;”Sobre nós”&lt;&lt;std::endln;}
-                </p>
+    <footer id="sobre">
+        <div class="footer-content">
+            <h3>Sobre nós:</h3>
+            <p>public class SobreNós {public static void main(String[] args) {System.out.println("Sobre nós");}}</p>
+            <p>int main() {std::cout << "Sobre nós" << std::endl;}</p>
+            <div class="footer-buttons">
+                <button class="footer-btn btn-primary">Saiba mais</button>
+                <button class="footer-btn btn-secondary">Saiba mais</button>
             </div>
-
-            <div class="split-button split-btn">
-                <button class="split-button-btn-leading m3-label-large btn-black hover-bright">Saiba mais</button>
-
-                <div class="split-button-trailing">
-                    <object data="assets/split-button/split-button-state-layer.svg" class="split-button-state-layer"
-                        type="image/svg+xml"></object>
-                </div>
-            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Direitos reservados</p>
         </div>
     </footer>
 </body>
+<script>
+    /* --- LÓGICA JAVASCRIPT INCLUÍDA --- */
+    document.addEventListener('DOMContentLoaded', () => {
+        let currentSlide = 0;
+        const heroContents = document.querySelectorAll('.hero-content');
+        const dots = document.querySelectorAll('.dot');
+        const heroBackground = document.querySelector('.hero-background');
+        const totalSlides = heroContents.length;
+        let autoSlideInterval;
 
+        /**
+         * Atualiza o background da seção hero com a imagem do slide ativo.
+         * @param {number} index - O índice do slide ativo.
+         */
+        function updateBackground(index) {
+            // Pega o caminho da imagem do atributo 'data-bg' do slide ativo
+            const imageUrl = heroContents[index].getAttribute('data-bg');
+            
+            // Define a imagem de fundo do elemento hero-background.
+            // O CSS (linear-gradient) já adiciona o overlay escuro.
+            heroBackground.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${imageUrl}')`;
+            heroBackground.style.opacity = '1';
+        }
+
+        /**
+         * Mostra um slide específico e atualiza o background e os dots.
+         * @param {number} index - O índice do slide a ser exibido.
+         */
+        function showSlide(index) {
+            if (index >= totalSlides) index = 0;
+            if (index < 0) index = totalSlides - 1;
+
+            // 1. Remove a classe 'active' de todos os elementos
+            heroContents.forEach(content => content.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            // 2. Adiciona a classe 'active' ao slide e dot atual
+            heroContents[index].classList.add('active');
+            dots[index].classList.add('active');
+
+            // 3. Atualiza o background
+            updateBackground(index);
+            
+            // 4. Salva o índice atual
+            currentSlide = index;
+        }
+
+        /** Avança para o próximo slide. */
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        /** Inicia o slide automático com intervalo. */
+        function startAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(nextSlide, 8000); // Roda a cada 8 segundos
+        }
+
+        /** Reseta o timer do slide automático após interação do usuário. */
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+
+        // Configura listeners para os dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+                resetAutoSlide();
+            });
+        });
+
+        // Inicialização: mostra o primeiro slide e inicia o carrossel
+        showSlide(currentSlide);
+        startAutoSlide();
+    });
+    /* --- FIM DA LÓGICA JAVASCRIPT --- */
+</script>
 </html>

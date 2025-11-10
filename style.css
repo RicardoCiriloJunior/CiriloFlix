@@ -1,93 +1,492 @@
-body {
+:root {
+    --amarelo-principal: #D4A522;
+    --amarelo-escuro: #B8941E;
+    --preto-fundo: #0a0a0a;
+    --cinza-escuro: #1a1a1a;
+    --cinza-medio: #2a2a2a;
+}
+
+* {
     margin: 0;
     padding: 0;
-    background-color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--preto-fundo);
+    color: white;
+}
+
+/* Header */
 header {
+    background-color: var(--amarelo-principal);
+    padding: 1.5rem 5rem;
     display: flex;
     justify-content: space-between;
-    padding: 0 50px;
-    background-color: #E2B616;
     align-items: center;
-    color: black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-table {
-    margin: 50px auto;
-}
-td {
-    background-color: #E2B616;
-}
-ul{
+
+.logo {
     display: flex;
-}
-li {
-    list-style: none;
-    padding-left: 0;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-.secao-imagem {
-    height: 300px;
-    width: 230px;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, -30px);
-    border-radius: 30px;
-    overflow: hidden;
-
-}
-.imagem-filme{
-    height: 300px;
-    width: 230px;
-    border-radius: 30px;
-    position: relative;
-    transition: transform 0.5s ease;
-}
-.filme {
-    height: 380px;
-    width: 250px;
-    border: 10px solid;
-    padding-top: 30px;
-    border-radius: 25px;
-}
-.filme:hover img{
-    transform-origin: center;
-    transform: scale(1.09);
-}
-
-.titulo {
-    font-size: x-large;
-    background-color: black;
-    color: white;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2.4rem;
     font-weight: bold;
-    padding-left: 50px;
-    padding-bottom: 25px;
-    padding-top: 25px;
+    color: var(--preto-fundo);
+}
+
+.logo img {
+    height: 5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 4rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--preto-fundo);
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+/* Hero Section */
+/* .hero {
+    position: relative;
+    height: 70vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23333" width="1200" height="800"/></svg>');
+    background-size: cover;
+    background-position: center;
+} */
+
+/* .hero-content {
+    text-align: center;
+    max-width: 700px;
+    padding: 0 2rem;
+} */
+
+/* .hero h1 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+} */
+
+/* .hero p {
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+} */
+
+/* .hero-dots {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+} */
+
+/* .hero-dots {
+    position: absolute;
+    bottom: 30px; /* distância do fundo 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+} */
+
+/* .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+} */
+
+/* .dot.active {
+    background-color: var(--amarelo-principal);
+} */
+
+/* Hero Section (Carrossel) */
+.hero {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Importante para o layout */
 }
-.botoes{
+
+/* Camada de fundo para a imagem dinâmica */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Mantém o overlay escuro sobre a imagem de fundo */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* Atrás de dots e conteúdo */
+    transition: background-image 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.hero-content {
+    /* Ajustado para centralizar e sobrepor o background */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    text-align: center;
+    max-width: 700px;
+    padding: 0 2rem;
+    color: white; /* Garante que o texto fique visível */
+    z-index: 2; /* Na frente do background */
+    
+    /* Configurações para o carrossel - apenas o slide ativo aparece */
+    opacity: 0; 
+    transition: opacity 0.8s ease-in-out; /* Transição suave */
+    pointer-events: none; /* Ignora cliques em slides ocultos */
+}
+
+.hero-content.active {
+    opacity: 1; /* Mostra apenas o slide ativo */
+    pointer-events: auto;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+.hero-dots {
+    position: absolute;
+    bottom: 30px; /* distância do fundo */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 3; /* Mais alto para ficar na frente de tudo */
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: var(--amarelo-principal);
+}
+
+/* Seções de Filmes */
+.filmes-section {
+    padding: 5rem 5rem;
+}
+
+.filmes-section h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+.filmes-container {
+    position: relative;
+}
+
+.filmes-scroll {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 2rem;
+}
+
+.filmes-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.filmes-scroll::-webkit-scrollbar-track {
+    background: var(--cinza-escuro);
+    border-radius: 4px;
+}
+
+.filmes-scroll::-webkit-scrollbar-thumb {
+    background: var(--amarelo-principal);
+    border-radius: 4px;
+}
+
+.filme-card {
+    position: relative;
+    min-width: 250px;
+    height: 140px;
+    background: var(--amarelo-principal);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+.filme-card:hover {
+    transform: scale(1.05);
+    filter: brightness(0.7);
+}
+
+.filme-card:hover .saiba-mais {
+    opacity: 1;
+}
+
+.saiba-mais {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+/* Mais Vistos com Numeração */
+.mais-vistos-scroll {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 2rem;
+}
+
+.mais-vistos-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.mais-vistos-scroll::-webkit-scrollbar-track {
+    background: var(--cinza-escuro);
+    border-radius: 4px;
+}
+
+.mais-vistos-scroll::-webkit-scrollbar-thumb {
+    background: var(--amarelo-principal);
+    border-radius: 4px;
+}
+
+.mais-visto-card {
+    position: relative;
+    min-width: 250px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    cursor: pointer;
 }
-a {
-    text-decoration: none;
-    color: black;
+
+.mais-visto-poster {
+    width: 100%;
+    height: 350px;
+    background: linear-gradient(to bottom, #e0e0e0 70%, var(--amarelo-principal) 70%);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.3s;
+    overflow: hidden;
 }
-.botao-veja {
-    background-color: #1729E3;
-    padding: 10px 15px;
-    border-radius: 15px;
-    margin-bottom: 3px;
+
+.mais-visto-numero {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--preto-fundo);
+    z-index: 2;
+}
+
+.mais-visto-card:hover .mais-visto-poster {
+    filter: brightness(0.7);
+}
+
+.mais-visto-card:hover .saiba-mais-mv {
+    opacity: 1;
+}
+
+.saiba-mais-mv {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #1e1e1e, #444);
+    padding: 3rem 5rem;
+    margin-top: 5rem;
+}
+
+.footer-content {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-content p {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-buttons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.footer-btn {
+    padding: 1rem 2.5rem;
+    border-radius: 25px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--preto-fundo);
     color: white;
 }
 
-footer{
-    background-color: #E2B616;
-    text-align: center;
-    font-size: large;
-    padding: 10px;
+.btn-primary:hover {
+    background-color: #2a2a2a;
 }
+
+.btn-secondary {
+    background-color: var(--amarelo-principal);
+    color: var(--preto-fundo);
+}
+
+.btn-secondary:hover {
+    background-color: var(--amarelo-escuro);
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 800px) {
+    header {
+        padding: 1.5rem 2rem;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    nav ul {
+        gap: 2rem;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero p {
+        font-size: 1.6rem;
+    }
+
+    .filmes-section {
+        padding: 3rem 2rem;
+    }
+
+    .filmes-section h2 {
+        font-size: 2.4rem;
+    }
+
+    footer {
+        padding: 2rem;
+    }
+
+    .footer-buttons {
+        flex-direction: column;
+    }
+}
+
+/* imgs */
+.film-a1 {
+    background: url('/assets/imgs/cartazes/Cacadores-da-arca-perdida.webp') no-repeat center center;
+    background-size: cover;
+}
+.film-a2 {
+    background: url('/assets/imgs/cartazes/de-volta-pro-futuro.webp') no-repeat center center;
+    background-size: cover;
+}
+.film-a3 {
+    background: url('/assets/imgs/cartazes/Exterminador-2.webp') no-repeat center center;
+    background-size: cover;
+}
+.film-a4 {
+    background: url('/assets/imgs/cartazes/Forest-Gump.webp') no-repeat center center;
+    background-size: cover;
+}
+.film-a5 {
+    background: url('/assets/imgs/cartazes/Gladiador.webp') no-repeat center center;
+    background-size: cover;
+}
+.film-a6 {
+    background: url('/assets/imgs/cartazes/Guerra-infinita.webp') no-repeat center center;
+    background-size: cover;
+}
+
+
+
