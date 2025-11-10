@@ -1,63 +1,296 @@
+:root {
+    --primary-color: #E2B617;
+    --secondary-color: #191717;
+}
+
 body {
     margin: 0;
     padding: 0;
-    background-color: black;
+    background: linear-gradient(to bottom right, #191717, #4B3F17, #E2B617);
     font-family: Arial, Helvetica, sans-serif;
+    min-height: 100dvh;
+    max-width: 100dvw;
 }
+
+/* Header */
 header {
     display: flex;
-    justify-content: space-between;
-    padding: 0 50px;
-    background-color: #E2B616;
     align-items: center;
-    color: black;
+    padding: 20px 40px;
+    background-color: var(--primary-color);
 }
-li {
-    list-style: none;
-    padding-left: 0;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-main{
+
+header nav {
     display: flex;
-    /* flex-direction: column; */
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-around;
     width: 100%;
 }
-.sobre {
-    background-color: #E2B616;
-    position: relative;
-    top: 100px;
-    margin: 20px 0 20px 0;
-    padding: 5px 0;
-    width: 45%;
-    border-radius: 20px;
-}
-article {
+
+.nav-links {
+    list-style: none;
     display: flex;
+    gap: 6rem;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.logo img {
+    height: 3rem;
+}
+
+/* final-header */
+
+/* Main Section */
+main {
+    display: flex;
+    flex-direction: column;
+    /* padding: 20px 20px; */
+    /* color: #191717; */
+}
+
+main hr {
+    border: none;
+    height: 1.4px;
+    background-color: var(--primary-color);
+    margin: 5rem 2rem;
+}
+
+/* Sobre */
+.card-lateral {
+    width: 75%;
+    background: var(--primary-color);
+    border-radius: 0 10rem 10rem 0;
+    padding: 2rem 10rem 2rem 2rem;
+    color: var(--secondary-color);
+}
+
+/* pessoas */
+.pessoa {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+}
+
+/* Card-pessoal */
+.card-pessoal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--primary-color);
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    gap: 2rem;
+    color: var(--primary-color);
+}
+
+.pessoa>h1 {
+    width: 100%;
+    font-size: 2.6rem;
+    color: var(--primary-color);
+}
+
+.info-pessoal {
+    box-sizing: border-box;
+    width: 70%;
+    padding: 0 2rem;
+}
+
+.img-pessoa {
+    height: 30rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* final-card-pessoal */
+
+/* Sec-curiosidades */
+.curiosidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.curiosidades h2 {
+    font-size: 2rem;
+    width: 100%;
+    color: var(--primary-color);
+    /* margin-bottom: 2rem; */
+}
+
+.curiosidades ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 80%;
+    list-style: none;
+}
+
+.card-curiosidade {
+    background: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 2rem;
+    padding: 2rem;
+    height: 12rem;
+    width: 10rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-h1 {
-    text-align: center;
-}
-.texto {
-    text-align: justify;
-    width: 90%;
-}
+/* final Sec-curiosidades */
 
-.contato{
-    margin-left: 35px;
-}
-
-footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
+/* Lugares que já visitei */
+.lugares-true {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    background-color: #E2B616;
     text-align: center;
-    font-size: large;
-    padding: 10px;
+}
+
+.lugares-true h2 {
+    font-size: 2rem;
+    width: 100%;
+    color: var(--primary-color);
+}
+
+.lugares-true ol {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style-position: inside;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.card-lugar {
+    box-sizing: border-box;
+    height: 10rem;
+    width: 10rem;
+    padding: 0.6rem;
+    font-size: 0.8rem;
+    text-align: left;
+    border: 1px solid var(--primary-color);
+    font-weight: bold;
+    color: white;
+}
+
+/* final Lugares que já visitei */
+
+/* quero visitar */
+.lugares-false {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.lugares-false h2 {
+    font-size: 2rem;
+    width: 100%;
+    color: var(--primary-color);
+}
+
+.lugares-false ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    list-style-position: inside;
+}
+
+.card-lugarF {
+    box-sizing: border-box;
+    height: 8rem;
+    width: 50rem;
+    border: 1px solid var(--primary-color);
+    text-align: left;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* final quero visitar */
+/* final Main Section */
+
+/* Imagens-fundo */
+/* p1 */
+.p1-l1 {
+    background: url('../imgs/lugares-Ricardo/sao-sebasteao.webp') no-repeat;
+}
+.p1-l2 {
+    background: url('../imgs/lugares-Ricardo/Caraguatatuba.webp') no-repeat;
+}
+.p1-l3 {
+    background: url('../imgs/lugares-Ricardo/Ubatuba.webp') no-repeat;
+}
+.p1-l4 {
+    background: url('../imgs/lugares-Ricardo/atibaia.webp') no-repeat;
+}
+.p1-l5 {
+    background: url('../imgs/lugares-Ricardo/guaruja.webp') no-repeat;
+}
+.p1-l6 {
+    background: url('../imgs/lugares-Ricardo/itu.webp') no-repeat;
+}
+.p1-l7 {
+    background: url('../imgs/lugares-Ricardo/Mongaguá.webp') no-repeat;
+}
+.p1-l8 {
+    background: url('../imgs/lugares-Ricardo/Itanhaém.webp') no-repeat;
+}
+.p1-l9 {
+    background: url('../imgs/lugares-Ricardo/aguas-de-lidoia.webp') no-repeat;
+}
+.p1-l10 {
+    background: url('../imgs/lugares-Ricardo/bady-bassitt.webp') no-repeat;
+}
+.p1-l11 {
+    background: url('../imgs/lugares-Ricardo/SC.webp') no-repeat;
+}
+.p1-lf1 {
+    background: url('../imgs/lugares-Ricardo/japao.webp') no-repeat;
+}
+.p1-lf2 {
+    background: url('../imgs/lugares-Ricardo/suiça.webp') no-repeat;
+}
+.p1-lf3 {
+    background: url('../imgs/lugares-Ricardo/Finlandia.webp') no-repeat;
+}
+
+/* p2 */
+.p2-l1 {
+    background: url('../imgs/lugares-Lucas/thermas-dos-laranjais.jpg') no-repeat;
+}
+.p2-l2 {
+    background: url('../imgs/lugares-Lucas/hopi-hari.jpg') no-repeat;
+}
+.p2-l3 {
+    background: url('../imgs/lugares-Lucas/vista-aerea-criciuma-sc-696x391.webp') no-repeat;
+}
+.p2-lf1 {
+    background: url('../imgs/lugares-Lucas/inglaterra.webp') no-repeat;
+}
+.p2-lf2 {
+    background: url('../imgs/lugares-Lucas/alemanha.webp') no-repeat;
+}
+.p2-lf3 {
+    background: url('../imgs/lugares-Ricardo/suiça.webp') no-repeat;
 }
