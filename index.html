@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoatFlix</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -24,23 +24,27 @@
 
     <main>
         <section class="hero" id="inicio">
-            <div class="hero-content active">
-                <h1>Interestelar:</h1>
-                <p>Uma missão além das estrelas para salvar a humanidade — amor, sacrifício e ciência colidem no limite
-                    do espaço-tempo.</p>
-            </div>
-            <div class="hero-content">
-                <h1>Vingadores - Guerra infinita:</h1>
-                <p>Heróis unidos contra o destino — esperança e dor em uma batalha pelo universo.</p>
-            </div>
-            <div class="hero-content">
-                <h1>Indiana Jones - A arca perdida:</h1>
-                <p>Aventura, mistério e perigo — um arqueólogo enfrenta forças antigas em busca de um artefato lendário.
-                </p>
-            </div>
-            <div class="hero-content">
-                <h1>Gladiador:</h1>
-                <p>Honra e vingança na arena — um guerreiro luta por justiça diante de impérios e traições.</p>
+            <div class="hero-background">
+                <div class="hero-content active">
+                    <h1>Interestelar:</h1>
+                    <p>Uma missão além das estrelas para salvar a humanidade — amor, sacrifício e ciência colidem no
+                        limite
+                        do espaço-tempo.</p>
+                </div>
+                <div class="hero-content">
+                    <h1>Vingadores - Guerra infinita:</h1>
+                    <p>Heróis unidos contra o destino — esperança e dor em uma batalha pelo universo.</p>
+                </div>
+                <div class="hero-content">
+                    <h1>Indiana Jones - A arca perdida:</h1>
+                    <p>Aventura, mistério e perigo — um arqueólogo enfrenta forças antigas em busca de um artefato
+                        lendário.
+                    </p>
+                </div>
+                <div class="hero-content">
+                    <h1>Gladiador:</h1>
+                    <p>Honra e vingança na arena — um guerreiro luta por justiça diante de impérios e traições.</p>
+                </div>
             </div>
 
             <!-- Dots -->
@@ -66,23 +70,31 @@
                             <span class="saiba-mais">Saiba mais</span>
                         </div>
                     </a>
-                    <div class="filme-card film-a3">
-                        <span class="saiba-mais">Saiba mais</span>
-                    </div>
-                    <div class="filme-card film-a4">
-                        <span class="saiba-mais">Saiba mais</span>
-                    </div>
-                    <div class="filme-card film-a5">
-                        <span class="saiba-mais">Saiba mais</span>
-                    </div>
-                    <div class="filme-card film-a6">
-                        <span class="saiba-mais">Saiba mais</span>
-                    </div>
+                    <a href="">
+                        <div class="filme-card film-a3">
+                            <span class="saiba-mais">Saiba mais</span>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="filme-card film-a4">
+                            <span class="saiba-mais">Saiba mais</span>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="filme-card film-a5">
+                            <span class="saiba-mais">Saiba mais</span>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="filme-card film-a6">
+                            <span class="saiba-mais">Saiba mais</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- <section class="filmes-section" id="mais-vistos">
+        <section class="filmes-section" id="mais-vistos">
             <h2>Mais Vistos</h2>
             <div class="filmes-container">
                 <div class="mais-vistos-scroll">
@@ -118,10 +130,10 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
 
         <section class="filmes-section">
-            <h2>Filmes de Comédia</h2>
+            <h2>Outros filmes</h2>
             <div class="filmes-container">
                 <div class="filmes-scroll">
                     <div class="filme-card film-c1">
@@ -144,8 +156,7 @@
             <p>public class SobreNós {public static void main(String[] args) {System.out.println("Sobre nós");}}</p>
             <p>int main() {std::cout << "Sobre nós" << std::endl;}</p>
                     <div class="footer-buttons">
-                        <button class="footer-btn btn-primary">Saiba mais</button>
-                        <button class="footer-btn btn-secondary">Saiba mais</button>
+                        <a href="pages/sobre.html"><button class="footer-btn btn-secondary">Saiba mais</button></a>
                     </div>
         </div>
         <div class="footer-bottom">
@@ -153,7 +164,7 @@
         </div>
     </footer>
 </body>
-<script>
+<!-- <script>
     /* --- LÓGICA JAVASCRIPT INCLUÍDA --- */
     document.addEventListener('DOMContentLoaded', () => {
         let currentSlide = 0;
@@ -230,6 +241,6 @@
         startAutoSlide();
     });
     /* --- FIM DA LÓGICA JAVASCRIPT --- */
-</script>
+</script> -->
 
 </html>

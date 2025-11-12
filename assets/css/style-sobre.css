@@ -63,17 +63,17 @@ main hr {
     margin: 5rem 2rem;
 }
 
-.about-section > h1 {
+.about-section>h1 {
     color: var(--primary-color);
     margin-left: 20px;
 }
 
 /* Sobre */
 .card-lateral {
-    width: 75%;
+    width: 50%;
     background: var(--primary-color);
-    border-radius: 0 10rem 10rem 0;
-    padding: 2rem 10rem 2rem 2rem;
+    border-radius: 0 12rem 12rem 0;
+    padding: 2rem 10rem 2rem 4rem;
     color: var(--secondary-color);
 }
 
@@ -247,7 +247,7 @@ main hr {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
+
     transition: 0.3s ease;
 }
 
@@ -263,42 +263,55 @@ main hr {
 .p1-l1 {
     background: url('../imgs/lugares-Ricardo/sao-sebasteao.webp') no-repeat;
 }
+
 .p1-l2 {
     background: url('../imgs/lugares-Ricardo/Caraguatatuba.webp') no-repeat;
 }
+
 .p1-l3 {
     background: url('../imgs/lugares-Ricardo/Ubatuba.webp') no-repeat;
 }
+
 .p1-l4 {
     background: url('../imgs/lugares-Ricardo/atibaia.webp') no-repeat;
 }
+
 .p1-l5 {
     background: url('../imgs/lugares-Ricardo/guaruja.webp') no-repeat;
 }
+
 .p1-l6 {
     background: url('../imgs/lugares-Ricardo/itu.webp') no-repeat;
 }
+
 .p1-l7 {
     background: url('../imgs/lugares-Ricardo/Mongaguá.webp') no-repeat;
 }
+
 .p1-l8 {
     background: url('../imgs/lugares-Ricardo/Itanhaém.webp') no-repeat;
 }
+
 .p1-l9 {
     background: url('../imgs/lugares-Ricardo/aguas-de-lidoia.webp') no-repeat;
 }
+
 .p1-l10 {
     background: url('../imgs/lugares-Ricardo/bady-bassitt.webp') no-repeat;
 }
+
 .p1-l11 {
     background: url('../imgs/lugares-Ricardo/SC.webp') no-repeat;
 }
+
 .p1-lf1 {
     background-image: url('../imgs/lugares-Ricardo/japao.webp');
 }
+
 .p1-lf2 {
     background-image: url('../imgs/lugares-Ricardo/suiça.webp');
 }
+
 .p1-lf3 {
     background-image: url('../imgs/lugares-Ricardo/Finlandia.webp');
 }
@@ -307,18 +320,23 @@ main hr {
 .p2-l1 {
     background: url('../imgs/lugares-Lucas/thermas-dos-laranjais.jpg') no-repeat;
 }
+
 .p2-l2 {
     background: url('../imgs/lugares-Lucas/hopi-hari.jpg') no-repeat;
 }
+
 .p2-l3 {
     background: url('../imgs/lugares-Lucas/vista-aerea-criciuma-sc-696x391.webp') no-repeat;
 }
+
 .p2-lf1 {
     background-image: url('../imgs/lugares-Lucas/inglaterra.webp');
 }
+
 .p2-lf2 {
     background-image: url('../imgs/lugares-Lucas/alemanha.webp');
 }
+
 .p2-lf3 {
     background-image: url('../imgs/lugares-Ricardo/suiça.webp');
 }

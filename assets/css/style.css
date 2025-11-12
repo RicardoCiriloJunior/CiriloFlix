@@ -67,73 +67,13 @@ nav a:hover {
 }
 
 /* Hero Section */
-/* .hero {
-    position: relative;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23333" width="1200" height="800"/></svg>');
-    background-size: cover;
-    background-position: center;
-} */
-
-/* .hero-content {
-    text-align: center;
-    max-width: 700px;
-    padding: 0 2rem;
-} */
-
-/* .hero h1 {
-    font-size: 5rem;
-    margin-bottom: 2rem;
-    font-weight: bold;
-} */
-
-/* .hero p {
-    font-size: 2rem;
-    line-height: 1.6;
-    margin-bottom: 3rem;
-} */
-
-/* .hero-dots {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 3rem;
-} */
-
-/* .hero-dots {
-    position: absolute;
-    bottom: 30px; /* distância do fundo 
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-} */
-
-/* .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: background-color 0.3s;
-} */
-
-/* .dot.active {
-    background-color: var(--amarelo-principal);
-} */
-
-/* Hero Section (Carrossel) */
 .hero {
     position: relative;
-    height: 70vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Importante para o layout */
+    overflow: hidden;
 }
 
 /* Camada de fundo para a imagem dinâmica */
@@ -143,35 +83,31 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Mantém o overlay escuro sobre a imagem de fundo */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    background: url("/assets/imgs/hero-carrossel/hero-1.jpg") no-repeat center center;
     background-size: cover;
     background-position: center;
-    z-index: 1; /* Atrás de dots e conteúdo */
+    z-index: 1;
     transition: background-image 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .hero-content {
-    /* Ajustado para centralizar e sobrepor o background */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
     text-align: center;
     max-width: 700px;
     padding: 0 2rem;
-    color: white; /* Garante que o texto fique visível */
-    z-index: 2; /* Na frente do background */
-    
-    /* Configurações para o carrossel - apenas o slide ativo aparece */
+    color: white;
+    z-index: 2;
     opacity: 0; 
-    transition: opacity 0.8s ease-in-out; /* Transição suave */
-    pointer-events: none; /* Ignora cliques em slides ocultos */
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
 }
 
 .hero-content.active {
-    opacity: 1; /* Mostra apenas o slide ativo */
+    opacity: 1;
     pointer-events: auto;
 }
 
@@ -280,6 +216,7 @@ nav a:hover {
     opacity: 0;
     transition: opacity 0.3s;
     pointer-events: none;
+    color: white;
 }
 
 /* Mais Vistos com Numeração */
@@ -316,7 +253,7 @@ nav a:hover {
 .mais-visto-poster {
     width: 100%;
     height: 350px;
-    background: linear-gradient(to bottom, 70%, var(--amarelo-principal) 70%);
+    background: linear-gradient(to bottom, white, 70%, var(--amarelo-principal) 70%);
     border-radius: 12px;
     position: relative;
     transition: all 0.3s;
@@ -422,84 +359,44 @@ footer {
     color: rgba(255, 255, 255, 0.7);
 }
 
-@media (max-width: 800px) {
-    header {
-        padding: 1.5rem 2rem;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    nav ul {
-        gap: 2rem;
-    }
-
-    .hero {
-        height: 50vh;
-    }
-
-    .hero h1 {
-        font-size: 3.5rem;
-    }
-
-    .hero p {
-        font-size: 1.6rem;
-    }
-
-    .filmes-section {
-        padding: 3rem 2rem;
-    }
-
-    .filmes-section h2 {
-        font-size: 2.4rem;
-    }
-
-    footer {
-        padding: 2rem;
-    }
-
-    .footer-buttons {
-        flex-direction: column;
-    }
-}
-
 /* imgs */
+/* ação */
 .film-a1 {
-    background: url('/assets/imgs/cartazes/Guerra-infinita.webp') no-repeat center center;
+    background: url('/assets/imgs/capas/guerra-infinita.jpg') no-repeat center center;
     background-size: cover;
 }
 .film-a2 {
-    background: url('/assets/imgs/cartazes/interestelar.jpg') no-repeat center center;
+    background: url('/assets/imgs/capas/interestelr.webp') no-repeat center center;
     background-size: cover;
 }
 .film-a3 {
-    background: url('/assets/imgs/cartazes/Exterminador-2.webp') no-repeat center center;
+    background: url('/assets/imgs/capas/ext-futuro2.jpg') no-repeat center center;
     background-size: cover;
 }
 .film-a4 {
-    background: url('/assets/imgs/cartazes/Forest-Gump.webp') no-repeat center center;
+    background: url('/assets/imgs/capas/forrest-gump.jpg') no-repeat center center;
     background-size: cover;
 }
 .film-a5 {
-    background: url('/assets/imgs/cartazes/Gladiador.webp') no-repeat center center;
+    background: url('/assets/imgs/capas/O-gladiador.jpg') no-repeat center center;
     background-size: cover;
 }
 .film-a6 {
-    background: url('/assets/imgs/cartazes/de-volta-pro-futuro.webp') no-repeat center center;
+    background: url('/assets/imgs/capas/de-volta-para-o-futuro.jpg') no-repeat center center;
     background-size: cover;
 }
 
+/* outros */
 .film-c1 {
-    background: url('/assets/imgs/cartazes/Cacadores-da-arca-perdida.webp') no-repeat center center;
+    background: url('/assets/imgs/capas/IJ-arca-perdida.png') no-repeat center center;
     background-size: cover;
 }
-
 .film-c2 {
-    background: url('/assets/imgs/cartazes/Homem-aranha-aranhaverso.webp') no-repeat center center;
+    background: url('/assets/imgs/capas/Aranhaverso-2.jpg') no-repeat center center;
     background-size: cover;
 }
-
 .film-c3 {
-    background: url('/assets/imgs/cartazes/Forest-Gump.webp') no-repeat center center;
+    background: url('/assets/imgs/capas/forrest-gump.jpg') no-repeat center center;
     background-size: cover;
 }
 
