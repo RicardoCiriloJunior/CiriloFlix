@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoatFlix</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
@@ -164,83 +164,5 @@
         </div>
     </footer>
 </body>
-<!-- <script>
-    /* --- LÓGICA JAVASCRIPT INCLUÍDA --- */
-    document.addEventListener('DOMContentLoaded', () => {
-        let currentSlide = 0;
-        const heroContents = document.querySelectorAll('.hero-content');
-        const dots = document.querySelectorAll('.dot');
-        const heroBackground = document.querySelector('.hero-background');
-        const totalSlides = heroContents.length;
-        let autoSlideInterval;
-
-        /**
-         * Atualiza o background da seção hero com a imagem do slide ativo.
-         * @param {number} index - O índice do slide ativo.
-         */
-        function updateBackground(index) {
-            // Pega o caminho da imagem do atributo 'data-bg' do slide ativo
-            const imageUrl = heroContents[index].getAttribute('data-bg');
-
-            // Define a imagem de fundo do elemento hero-background.
-            // O CSS (linear-gradient) já adiciona o overlay escuro.
-            heroBackground.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${imageUrl}')`;
-            heroBackground.style.opacity = '1';
-        }
-
-        /**
-         * Mostra um slide específico e atualiza o background e os dots.
-         * @param {number} index - O índice do slide a ser exibido.
-         */
-        function showSlide(index) {
-            if (index >= totalSlides) index = 0;
-            if (index < 0) index = totalSlides - 1;
-
-            // 1. Remove a classe 'active' de todos os elementos
-            heroContents.forEach(content => content.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-
-            // 2. Adiciona a classe 'active' ao slide e dot atual
-            heroContents[index].classList.add('active');
-            dots[index].classList.add('active');
-
-            // 3. Atualiza o background
-            updateBackground(index);
-
-            // 4. Salva o índice atual
-            currentSlide = index;
-        }
-
-        /** Avança para o próximo slide. */
-        function nextSlide() {
-            showSlide(currentSlide + 1);
-        }
-
-        /** Inicia o slide automático com intervalo. */
-        function startAutoSlide() {
-            clearInterval(autoSlideInterval);
-            autoSlideInterval = setInterval(nextSlide, 8000); // Roda a cada 8 segundos
-        }
-
-        /** Reseta o timer do slide automático após interação do usuário. */
-        function resetAutoSlide() {
-            clearInterval(autoSlideInterval);
-            startAutoSlide();
-        }
-
-        // Configura listeners para os dots
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                showSlide(index);
-                resetAutoSlide();
-            });
-        });
-
-        // Inicialização: mostra o primeiro slide e inicia o carrossel
-        showSlide(currentSlide);
-        startAutoSlide();
-    });
-    /* --- FIM DA LÓGICA JAVASCRIPT --- */
-</script> -->
 
 </html>
