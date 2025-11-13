@@ -188,16 +188,6 @@ nav a:hover {
     height: 8px;
 }
 
-.filmes-scroll::-webkit-scrollbar-track {
-    background: var(--cinza-escuro);
-    border-radius: 4px;
-}
-
-.filmes-scroll::-webkit-scrollbar-thumb {
-    background: var(--amarelo-principal);
-    border-radius: 4px;
-}
-
 .filme-card {
     position: relative;
     min-width: 250px;
@@ -253,15 +243,6 @@ nav a:hover {
     height: 8px;
 }
 
-.mais-vistos-scroll::-webkit-scrollbar-track {
-    background: var(--cinza-escuro);
-    border-radius: 4px;
-}
-
-.mais-vistos-scroll::-webkit-scrollbar-thumb {
-    background: var(--amarelo-principal);
-    border-radius: 4px;
-}
 
 .mais-visto-card {
     position: relative;
