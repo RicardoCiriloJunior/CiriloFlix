@@ -1,3 +1,11 @@
+:root {
+    --amarelo-principal: #D4A522;
+    --amarelo-escuro: #B8941E;
+    --preto-fundo: #0a0a0a;
+    --cinza-escuro: #1a1a1a;
+    --cinza-medio: #2a2a2a;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -8,9 +16,26 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 0 50px;
-    background-color: #E2B616;
+    background-color: var(--amarelo-principal);
     align-items: center;
     color: black;
+    height: 5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 #conteiner {
