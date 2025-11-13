@@ -197,7 +197,7 @@ main hr {
     list-style-position: inside;
     align-items: center;
     justify-content: center;
-    gap: 2px;
+    gap: 15px;
 }
 
 .card-lugar {
@@ -207,10 +207,10 @@ main hr {
     padding: 0.6rem;
     font-size: 0.8rem;
     text-align: left;
-    border: 1px solid var(--primary-color);
     font-weight: bold;
     color: white;
     transition: 0.3s ease;
+    border-radius: 15px;
 }
 
 .card-lugar:hover {
@@ -240,18 +240,18 @@ main hr {
     flex-direction: column;
     list-style: none;
     list-style-position: inside;
-    gap: 5px;
+    gap: 20px;
 }
 
 .card-lugarF {
     box-sizing: border-box;
     height: 10rem;
     width: 50rem;
-    border: 1px solid var(--primary-color);
     text-align: left;
     padding: 1rem;
     font-size: 1.2rem;
     color: white;
+    border-radius: 15px;
 
     background-size: cover;
     background-position: center;
