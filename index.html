@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoatFlix</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -17,16 +17,24 @@
             <ul>
                 <li><a href="#inicio">Home</a></li>
                 <li><a href="#mais-vistos">Mais Vistos</a></li>
-                <li><a href="/pages/sobre.html">Sobre nós</a></li>
+                <li><a href="pages/sobre.html">Sobre nós</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="hero" id="inicio">
+            <div class="hero-background">
+                <img src="assets/imgs/hero-carrossel/hero-1.jpg" alt="Hero Background" class="hero-img active">
+                <img src="assets/imgs/hero-carrossel/hero-2.jpg" alt="Hero Background" class="hero-img">
+                <img src="assets/imgs/hero-carrossel/hero-3.jpg" alt="Hero Background" class="hero-img">
+                <img src="assets/imgs/hero-carrossel/hero-4.jpg" alt="Hero Background" class="hero-img">
+            </div>
+            
             <div class="hero-content active">
                 <h1>Interestelar:</h1>
-                <p>Uma missão além das estrelas para salvar a humanidade — amor, sacrifício e ciência colidem no limite
+                <p>Uma missão além das estrelas para salvar a humanidade — amor, sacrifício e ciência colidem no
+                    limite
                     do espaço-tempo.</p>
             </div>
             <div class="hero-content">
@@ -35,7 +43,8 @@
             </div>
             <div class="hero-content">
                 <h1>Indiana Jones - A arca perdida:</h1>
-                <p>Aventura, mistério e perigo — um arqueólogo enfrenta forças antigas em busca de um artefato lendário.
+                <p>Aventura, mistério e perigo — um arqueólogo enfrenta forças antigas em busca de um artefato
+                    lendário.
                 </p>
             </div>
             <div class="hero-content">
@@ -56,23 +65,39 @@
             <h2>Filmes de Ação</h2>
             <div class="filmes-container">
                 <div class="filmes-scroll">
-                    <div class="filme-card film-a1">
-                        <span class="saiba-mais">Saiba mais</span>
-                    </div>
-                    <div class="filme-card film-a2">
-                        <span class="saiba-mais">Saiba mais</span>
-                    </div>
-                    <div class="filme-card film-a3">
-                        <span class="saiba-mais">Saiba mais</span>
-                    </div>
-                    <div class="filme-card film-a4">
-                        <span class="saiba-mais">Saiba mais</span>
-                    </div>
-                    <div class="filme-card film-a5">
-                        <span class="saiba-mais">Saiba mais</span>
-                    </div>
-                    <a href="/pages/guerra-infinita.html">
-                        <div class="filme-card film-a6">
+                    <a href="pages/guerra-infinita.html">
+                        <div class="filme-card">
+                            <img src="assets/imgs/capas/guerra-infinita.jpg" alt="Guerra Infinita">
+                            <span class="saiba-mais">Saiba mais</span>
+                        </div>
+                    </a>
+                    <a href="pages/interestelar.html">
+                        <div class="filme-card">
+                            <img src="assets/imgs/capas/interestelr.webp" alt="Interestelar">
+                            <span class="saiba-mais">Saiba mais</span>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="filme-card">
+                            <img src="assets/imgs/capas/ext-futuro2.jpg" alt="Exterminador do Futuro 2">
+                            <span class="saiba-mais">Saiba mais</span>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="filme-card">
+                            <img src="assets/imgs/capas/forrest-gump.jpg" alt="Forrest Gump">
+                            <span class="saiba-mais">Saiba mais</span>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="filme-card">
+                            <img src="assets/imgs/capas/O-gladiador.jpg" alt="O Gladiador">
+                            <span class="saiba-mais">Saiba mais</span>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="filme-card">
+                            <img src="assets/imgs/capas/de-volta-para-o-futuro.jpg" alt="De Volta para o Futuro">
                             <span class="saiba-mais">Saiba mais</span>
                         </div>
                     </a>
@@ -85,33 +110,24 @@
             <div class="filmes-container">
                 <div class="mais-vistos-scroll">
                     <div class="mais-visto-card">
-                        <div class="mais-visto-poster mv1">
+                        <div class="mais-visto-poster">
+                            <img src="assets/imgs/cartazes/Matrix.jpg" alt="Mais Visto 1" class="mais-visto-img">
                             <span class="saiba-mais-mv">Saiba mais</span>
                             <div class="mais-visto-numero">1</div>
                         </div>
                     </div>
                     <div class="mais-visto-card">
-                        <div class="mais-visto-poster mv2">
+                        <div class="mais-visto-poster">
+                            <img src="assets/imgs/cartazes/Forest-Gump.webp" alt="Mais Visto 2" class="mais-visto-img">
                             <span class="saiba-mais-mv">Saiba mais</span>
                             <div class="mais-visto-numero">2</div>
                         </div>
                     </div>
                     <div class="mais-visto-card">
-                        <div class="mais-visto-poster mv3">
+                        <div class="mais-visto-poster">
+                            <img src="assets/imgs/cartazes/star-wars-V.png" alt="Mais Visto 3" class="mais-visto-img">
                             <span class="saiba-mais-mv">Saiba mais</span>
                             <div class="mais-visto-numero">3</div>
-                        </div>
-                    </div>
-                    <div class="mais-visto-card">
-                        <div class="mais-visto-poster mv4">
-                            <span class="saiba-mais-mv">Saiba mais</span>
-                            <div class="mais-visto-numero">4</div>
-                        </div>
-                    </div>
-                    <div class="mais-visto-card">
-                        <div class="mais-visto-poster mv5">
-                            <span class="saiba-mais-mv">Saiba mais</span>
-                            <div class="mais-visto-numero">5</div>
                         </div>
                     </div>
                 </div>
@@ -119,25 +135,19 @@
         </section>
 
         <section class="filmes-section">
-            <h2>Filmes de Comédia</h2>
+            <h2>Outros filmes</h2>
             <div class="filmes-container">
                 <div class="filmes-scroll">
-                    <div class="filme-card film-c1">
+                    <div class="filme-card">
+                        <img src="assets/imgs/capas/IJ-arca-perdida.png" alt="Indiana Jones - A Arca Perdida">
                         <span class="saiba-mais">Saiba mais</span>
                     </div>
-                    <div class="filme-card film-c2">
+                    <div class="filme-card">
+                        <img src="assets/imgs/capas/Aranhaverso-2.jpg" alt="Homem-Aranha no Aranhaverso 2">
                         <span class="saiba-mais">Saiba mais</span>
                     </div>
-                    <div class="filme-card film-c3">
-                        <span class="saiba-mais">Saiba mais</span>
-                    </div>
-                    <div class="filme-card film-c4">
-                        <span class="saiba-mais">Saiba mais</span>
-                    </div>
-                    <div class="filme-card film-c5">
-                        <span class="saiba-mais">Saiba mais</span>
-                    </div>
-                    <div class="filme-card film-c6">
+                    <div class="filme-card">
+                        <img src="assets/imgs/capas/forrest-gump.jpg" alt="Forrest Gump">
                         <span class="saiba-mais">Saiba mais</span>
                     </div>
                 </div>
@@ -146,86 +156,8 @@
     </main>
 
     <footer id="sobre">
-        <p>&copy; 2024 CiriloFlix. Todos os direitos reservados.</p>
+        <p>Todos os direitos reservados &copy; 2025 Lucas Candido e Ricardo Cirilo<p>
     </footer>
 </body>
-<script>
-    /* --- LÓGICA JAVASCRIPT INCLUÍDA --- */
-    document.addEventListener('DOMContentLoaded', () => {
-        let currentSlide = 0;
-        const heroContents = document.querySelectorAll('.hero-content');
-        const dots = document.querySelectorAll('.dot');
-        const heroBackground = document.querySelector('.hero-background');
-        const totalSlides = heroContents.length;
-        let autoSlideInterval;
-
-        /**
-         * Atualiza o background da seção hero com a imagem do slide ativo.
-         * @param {number} index - O índice do slide ativo.
-         */
-        function updateBackground(index) {
-            // Pega o caminho da imagem do atributo 'data-bg' do slide ativo
-            const imageUrl = heroContents[index].getAttribute('data-bg');
-
-            // Define a imagem de fundo do elemento hero-background.
-            // O CSS (linear-gradient) já adiciona o overlay escuro.
-            heroBackground.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${imageUrl}')`;
-            heroBackground.style.opacity = '1';
-        }
-
-        /**
-         * Mostra um slide específico e atualiza o background e os dots.
-         * @param {number} index - O índice do slide a ser exibido.
-         */
-        function showSlide(index) {
-            if (index >= totalSlides) index = 0;
-            if (index < 0) index = totalSlides - 1;
-
-            // 1. Remove a classe 'active' de todos os elementos
-            heroContents.forEach(content => content.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-
-            // 2. Adiciona a classe 'active' ao slide e dot atual
-            heroContents[index].classList.add('active');
-            dots[index].classList.add('active');
-
-            // 3. Atualiza o background
-            updateBackground(index);
-
-            // 4. Salva o índice atual
-            currentSlide = index;
-        }
-
-        /** Avança para o próximo slide. */
-        function nextSlide() {
-            showSlide(currentSlide + 1);
-        }
-
-        /** Inicia o slide automático com intervalo. */
-        function startAutoSlide() {
-            clearInterval(autoSlideInterval);
-            autoSlideInterval = setInterval(nextSlide, 8000); // Roda a cada 8 segundos
-        }
-
-        /** Reseta o timer do slide automático após interação do usuário. */
-        function resetAutoSlide() {
-            clearInterval(autoSlideInterval);
-            startAutoSlide();
-        }
-
-        // Configura listeners para os dots
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                showSlide(index);
-                resetAutoSlide();
-            });
-        });
-
-        // Inicialização: mostra o primeiro slide e inicia o carrossel
-        showSlide(currentSlide);
-        startAutoSlide();
-    });
-    /* --- FIM DA LÓGICA JAVASCRIPT --- */
-</script>
 
 </html>
