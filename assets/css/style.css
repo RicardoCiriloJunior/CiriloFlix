@@ -70,7 +70,7 @@ nav a:hover {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 80vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,6 +161,10 @@ nav a:hover {
 }
 
 /* Seções de Filmes */
+.cards-part {
+    margin: 6rem 0 ;
+}
+
 .filmes-section {
     padding: 5rem 5rem;
 }

@@ -1,0 +1,151 @@
+:root {
+    --amarelo-principal: #D4A522;
+    --amarelo-escuro: #B8941E;
+    --preto-fundo: #0a0a0a;
+    --cinza-escuro: #1a1a1a;
+    --cinza-medio: #2a2a2a;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: aliceblue;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    background-color: var(--amarelo-principal);
+    align-items: center;
+    color: black;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+    margin: 4rem 0;
+}
+
+#background-main {
+    z-index: -1;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center 25%;
+    opacity: 0.5;
+}
+
+#imagens {
+    width: 50%;
+    padding: 1rem 1.8rem;
+
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    border-radius: 20px;
+}
+
+#GI2,
+#GI3,
+#GI4 {
+    width: 240px;
+    border-radius: 10px;
+}
+
+#resumo {
+    padding: 1rem 1.8rem;
+    background: var(--cinza-escuro);
+    border-radius: 20px;
+}
+
+#resumo h1 {
+    font-size: 1.6rem;
+}
+
+.td1 {
+    padding: 20px;
+}
+
+.td1 img {
+    height: 140px;
+    width: 200px;
+
+    object-fit: cover;
+}
+
+#GI1 {
+    width: 21.4rem;
+    border-radius: 10px;
+}
+
+.etVaz {
+    width: 80px;
+    margin: 0;
+}
+
+.info-filme {
+    width: 40%;
+}
+
+#creditos {
+    width: 86%;
+}
+
+#princ{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+#principal {
+    width: 86%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    #imagens, .info-filme {
+        width: 90%;
+    }
+
+    #principal {
+        flex-direction: column;
+        align-items: center;
+    }
+}
