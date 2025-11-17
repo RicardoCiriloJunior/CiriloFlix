@@ -59,8 +59,6 @@ header nav {
 main {
     display: flex;
     flex-direction: column;
-    /* padding: 20px 20px; */
-    /* color: #191717; */
 }
 
 main hr {
@@ -68,6 +66,15 @@ main hr {
     height: 1.4px;
     background-color: var(--primary-color);
     margin: 5rem 2rem;
+}
+
+.about-section {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
 }
 
 .about-section>h1 {
@@ -139,7 +146,6 @@ main hr {
     font-size: 2rem;
     width: 100%;
     color: var(--primary-color);
-    /* margin-bottom: 2rem; */
 }
 
 
@@ -194,27 +200,54 @@ main hr {
 .lugares-true ol {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    list-style: none;
     list-style-position: inside;
     align-items: center;
     justify-content: center;
     gap: 15px;
+    padding: 0;
 }
 
 .card-lugar {
+    position: relative;
     box-sizing: border-box;
     height: 10rem;
     width: 10rem;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.card-lugar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-lugar .lugar-nome {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     padding: 0.6rem;
     font-size: 0.8rem;
     text-align: left;
     font-weight: bold;
     color: white;
-    transition: 0.3s ease;
-    border-radius: 15px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-lugar:hover .lugar-nome {
+    opacity: 1;
 }
 
 .card-lugar:hover {
-    transform: scale(1.30);
+    transform: scale(1.25);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
 }
 
 /* final Lugares que já visitei */
@@ -241,23 +274,44 @@ main hr {
     list-style: none;
     list-style-position: inside;
     gap: 20px;
+    padding: 0;
 }
 
 .card-lugarF {
+    position: relative;
     box-sizing: border-box;
     height: 10rem;
     width: 50rem;
-    text-align: left;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.card-lugarF img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: center 60%;
+}
+
+.card-lugarF .lugar-nome {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     padding: 1rem;
     font-size: 1.2rem;
+    text-align: left;
+    font-weight: bold;
     color: white;
-    border-radius: 15px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    transition: 0.3s ease;
+.card-lugarF:hover .lugar-nome {
+    opacity: 1;
 }
 
 .card-lugarF:hover {
@@ -267,91 +321,7 @@ main hr {
 /* final quero visitar */
 /* final Main Section */
 
-/* Imagens-fundo */
-/* p1 */
-.p1-l1 {
-    background: url('../imgs/lugares-Ricardo/sao-sebasteao.webp') no-repeat;
-}
-
-.p1-l2 {
-    background: url('../imgs/lugares-Ricardo/Caraguatatuba.webp') no-repeat;
-}
-
-.p1-l3 {
-    background: url('../imgs/lugares-Ricardo/Ubatuba.webp') no-repeat;
-}
-
-.p1-l4 {
-    background: url('../imgs/lugares-Ricardo/atibaia.webp') no-repeat;
-}
-
-.p1-l5 {
-    background: url('../imgs/lugares-Ricardo/guaruja.webp') no-repeat;
-}
-
-.p1-l6 {
-    background: url('../imgs/lugares-Ricardo/itu.webp') no-repeat;
-}
-
-.p1-l7 {
-    background: url('../imgs/lugares-Ricardo/Mongaguá.webp') no-repeat;
-}
-
-.p1-l8 {
-    background: url('../imgs/lugares-Ricardo/Itanhaém.webp') no-repeat;
-}
-
-.p1-l9 {
-    background: url('../imgs/lugares-Ricardo/aguas-de-lidoia.webp') no-repeat;
-}
-
-.p1-l10 {
-    background: url('../imgs/lugares-Ricardo/bady-bassitt.webp') no-repeat;
-}
-
-.p1-l11 {
-    background: url('../imgs/lugares-Ricardo/SC.webp') no-repeat;
-}
-
-.p1-lf1 {
-    background-image: url('../imgs/lugares-Ricardo/japao.webp');
-}
-
-.p1-lf2 {
-    background-image: url('../imgs/lugares-Ricardo/suiça.webp');
-}
-
-.p1-lf3 {
-    background-image: url('../imgs/lugares-Ricardo/Finlandia.webp');
-}
-
-/* p2 */
-.p2-l1 {
-    background: url('../imgs/lugares-Lucas/thermas-dos-laranjais.jpg') no-repeat;
-}
-
-.p2-l2 {
-    background: url('../imgs/lugares-Lucas/hopi-hari.jpg') no-repeat;
-}
-
-.p2-l3 {
-    background: url('../imgs/lugares-Lucas/vista-aerea-criciuma-sc-696x391.webp') no-repeat;
-}
-
-.p2-lf1 {
-    background-image: url('../imgs/lugares-Lucas/inglaterra.webp');
-}
-
-.p2-lf2 {
-    background-image: url('../imgs/lugares-Lucas/alemanha.webp');
-}
-
-.p2-lf3 {
-    background-image: url('../imgs/lugares-Ricardo/suiça.webp');
-}
-
 footer {
-    /* border: 1px solid white; */
     display: flex;
     justify-content: center;
     align-items: center;
